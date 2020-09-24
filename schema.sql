@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS `battle`;
+CREATE DATABASE `battle`;
