@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS `battle`;
-CREATE DATABASE `battle`;
+DROP DATABASE IF EXISTS `fighters`;
+CREATE DATABASE `fighters`;
+CREATE FUNCTION ['fighters'].stateName
