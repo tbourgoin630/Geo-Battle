@@ -1,4 +1,4 @@
-const Character = require("./app/models/character");
+const Character = require("../../models/character");
 
 let hero = new Character("Hero", 5, 1, 1, 1, 1, true);
 let enemy = new Character("Enemy", 5, 1, 1, 1, 1, false);
