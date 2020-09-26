@@ -1,7 +1,9 @@
 const Character = require("./app/models/character");
 
-let hero = new Character("Hero", 1, 1, 1, 1, 1, true);
-let enemy = new Character("Enemy", 1, 1, 1, 1, 1, false);
+let hero = new Character("Hero", 5, 1, 1, 1, 1, true);
+let enemy = new Character("Enemy", 5, 1, 1, 1, 1, false);
+let floridaMan = new Character("Florida Man", 100, 100, 100, 100, 100, false)
+let texasRanger = new Character("Texas Ranger", 1, 1, 1, 1, 1, false)
 
 let turnArray = [hero, enemy];
 let hit = false;
@@ -41,11 +43,16 @@ Character.prototype.isAlive = function () {
     }
 }
 Character.prototype.turn = function () {
-    if (this.player === false) {
-        this.attackTarget(hero)
+    if (this.hitPoints > 0) {
+        if (this.player === false) {
+            this.attackTarget(hero)
+        }
+        else {
+            this.attackTarget(enemy)
+        }
     }
     else {
-        this.attackTarget(enemy)
+        console.info("no turn for dead person")
     }
 }
 function combat() {
@@ -54,6 +61,17 @@ function combat() {
         for (i = 0; i < turnArray.length; i++) {
             turnArray[i].turn()
         }
+    }
+    console.info("Battle over")
+    if (hero.hitPoints > 0) {
+        console.info(hero.name + " wins")
+    }
+    else {
+        console.info(hero.name + " loses")
+        if (enemy.name === "Florida Man") {
+            console.info("No one defeats Florida Man.")
+        }
+        else { }
     }
 }
 combat()
