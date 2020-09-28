@@ -5,6 +5,7 @@ let enemy = new Character("Enemy", 5, 1, 1, 1, 1, false);
 let floridaMan = new Character("Florida Man", 100, 100, 100, 100, 100, false)
 let texasRanger = new Character("Texas Ranger", 1, 1, 1, 1, 1, false)
 let kentuckyColonel = new Character("Kentucky Colonel", 1, 1, 1, 1, 1, false)
+//boston teapartier
 
 let turnArray = [hero, enemy];
 let hit = false;
