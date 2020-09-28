@@ -9,8 +9,8 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="local stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link rel = "app\public\js\combat.js">
-    <link rel = "app\public\js\create.js">
+    <script  src="..\js\create.js"></script>
+    <script  src="..\js\combat.js"></script>
 </head>
 
 <body>
@@ -57,25 +57,25 @@
                 <div class="d-flex justify-content-center">
                     <p>
                         Hit Points
-                        <input id = "hp" type="text"> </input>
+                        <input id="hp" type="text"> </input>
                     </p>
                     <p>
                         Attack
-                        <input id = "attack" type="text"> </input>
+                        <input id="attack" type="text"> </input>
                     </p>
 
                     <p>
                         Defense
-                        <input id = "defense" type="text"> </input>
+                        <input id="defense" type="text"> </input>
                     </p>
 
                     <p>
                         Damage
-                        <input id = "damage" type="text"> </input>
+                        <input id="damage" type="text"> </input>
                     </p>
                     <p>
                         Speed
-                        <input id = "speed" type="text"> </input>
+                        <input id="speed" type="text"> </input>
                     </p>
                     <!-- <p>
                         Speed
@@ -88,7 +88,7 @@
         </div>
     </main>
     <div class="d-flex justify-content-center">
-        <button onclick = "createBattler()" type="button" class="btn btn-secondary btn-lg">Fight!</button>
+        <button onclick="createBattler()" type="button" class="btn btn-secondary btn-lg">Fight!</button>
     </div>
 
 </html>

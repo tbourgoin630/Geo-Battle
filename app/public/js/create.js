@@ -8,6 +8,6 @@ function createBattler()
     let speed = document.getElementById("speed").value;
 
     //hero creation
-    let hero = new Character (name, hitPoints, attack, defense, damage, speed)
+    hero = new Character (name, hitPoints, attack, defense, damage, speed, true)
     console.log(hero)
 }
