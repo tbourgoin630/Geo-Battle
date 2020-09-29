@@ -27,7 +27,9 @@ module.exports = function (app) {
   // // all route loads the all.html page,
   // // where all characters in the db are displayed
   app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+  });
+  app.get("/battle", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/html/battle.html"));
   });
-
 };
