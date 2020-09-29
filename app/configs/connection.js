@@ -10,6 +10,7 @@ var sequelize = new Sequelize("battlers", "root", "", {
   host: "localhost",
   port: 3306,
   dialect: "mysql",
+  database: "geo_location",
   pool: {
     max: 5,
     min: 0,
