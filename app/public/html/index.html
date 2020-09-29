@@ -9,8 +9,8 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="local stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <script  src="..\js\create.js"></script>
-    <script  src="..\js\combat.js"></script>
+    <script src="..\js\create.js"></script>
+    <script src="..\js\combat.js"></script>
 </head>
 
 <body>
@@ -52,36 +52,53 @@
             <br>
             <div class="stats">
                 <!--This is "30 points for warior strength-->
-                <h2>30 Points for Warriors Strength</h2>
+                <h2>10 Points to Distribute to your Battler</h2>
                 <br>
                 <div class="d-flex justify-content-center">
                     <p>
-                        Hit Points
-                        <input id="hp" type="text"> </input>
+                        <label>Attack</label>
+                        <select id="attack">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
                     </p>
                     <p>
-                        Attack
-                        <input id="attack" type="text"> </input>
-                    </p>
-
-                    <p>
-                        Defense
-                        <input id="defense" type="text"> </input>
-                    </p>
-
-                    <p>
-                        Damage
-                        <input id="damage" type="text"> </input>
+                        <label>Defense</label>
+                        <select id="defense">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
                     </p>
                     <p>
-                        Speed
-                        <input id="speed" type="text"> </input>
+                        <label>Damage</label>
+                        <select id="damage">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
                     </p>
-                    <!-- <p>
-                        Speed
-                        <input type="text"> </input>
-                    </p> -->
-
+                    <p>
+                        <label>Speed</label>
+                        <select id="speed">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+                    </p>
                 </div>
             </div>
         </div>

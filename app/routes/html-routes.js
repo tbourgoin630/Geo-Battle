@@ -9,7 +9,7 @@ var path = require("path");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
@@ -26,8 +26,10 @@ module.exports = function(app) {
 
   // // all route loads the all.html page,
   // // where all characters in the db are displayed
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
-
+  app.get("/battle", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/battle.html"));
+  });
 };
