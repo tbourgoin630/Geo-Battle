@@ -32,3 +32,15 @@ body {
       -webkit-text-fill-color: white;
     }
   }
+
+  .healthplayer {
+    position: fixed;
+            top: 250px;
+            left: 360px;
+  }
+
+  .healthcpu {
+    position: fixed;
+            top: 250px;
+            left: 1150px;
+  }
