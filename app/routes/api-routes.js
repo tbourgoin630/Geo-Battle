@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var Character = require("../models/character.js");
+var Battler = require("../models/character.js");
 
 // Routes
 // =============================================================
@@ -96,7 +96,7 @@ module.exports = function (app) {
     });
 
     // Delete a book
-    app.delete("/api/attler/:id", function (req, res) {
+    app.delete("/api/battler/:id", function (req, res) {
         console.log("Book ID:");
         console.log(req.params.id);
         Battler.destroy({

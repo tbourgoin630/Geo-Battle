@@ -20,7 +20,9 @@
   "homepage": "https://github.com/tbourgoin630/Geo-Battle#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "sql": "^0.78.0"
+    "sequelize": "^6.3.5",
+    "sql": "^0.78.0",
+    "stack": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
