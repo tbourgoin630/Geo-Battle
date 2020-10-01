@@ -15,64 +15,64 @@
 // Sequelize (capital) references the standard library
 var Sequelize = require("sequelize");
 // sequelize (lowercase) references my connection to the DB.
-var sequelize = require("../config/connection.js");
+var sequelize = require("../configs/connection.js");
 
 // Creates a "Book" model that matches up with DB
-var Battler = sequelize.define("battler", {
+var Battler = sequelize.define("battler_db", {
             name: Sequelize.STRING,
             hitPoints: Sequelize.INTEGER,
             attack: Sequelize.INTEGER,
             defense: Sequelize.INTEGER,
             speed: Sequelize.INTEGER,
             damage: Sequelize.INTEGER,
-            player: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true},
-        checkIfHit(target) {
-            let hitChance = .5 - .1 * (target.defense);
-            console.info(hitChance + " hit chance")
-            let hitRoll = Math.random() + .1 * (this.attack);
-            console.info(hitRoll + " hit roll")
-            if (hitRoll >= hitChance) {
-                hit = true;
-            }
-            else {
-                hit = false;
+            player: Sequelize.BOOLEAN,
+        // checkIfHit(target) {
+        //     let hitChance = .5 - .1 * (target.defense);
+        //     console.info(hitChance + " hit chance")
+        //     let hitRoll = Math.random() + .1 * (this.attack);
+        //     console.info(hitRoll + " hit roll")
+        //     if (hitRoll >= hitChance) {
+        //         hit = true;
+        //     }
+        //     else {
+        //         hit = false;
     
-            }
-        },
-        attackTarget(target) {
-            console.info(this.name + " attacks " + target.name)
-            this.checkIfHit(target)
-            if (hit === true) {
-                let dmg = this.damage
-                console.info(dmg)
-                target.hitPoints -= dmg;
-            }
-            else {
-                console.info(this.name + " misses " + target.name)
-            }
-            target.isAlive();
-        },
-        isAlive() {
-            if (this.hitPoints > 0) {
-                console.info(this.name + " is alive.")
-            }
-            else {
-                console.info(this.name + " has died!");
-            }
-        },
-        turn() {
-            if (this.hitPoints > 0) {
-                if (this.player === false) {
-                    this.attackTarget(hero)
-                }
-                else {
-                    this.attackTarget(enemy)
-                }
-            }
-            else {
-                console.info("no turn for dead person")
-            }
-        }
+        //     }
+        // },
+        // attackTarget(target) {
+        //     console.info(this.name + " attacks " + target.name)
+        //     this.checkIfHit(target)
+        //     if (hit === true) {
+        //         let dmg = this.damage
+        //         console.info(dmg)
+        //         target.hitPoints -= dmg;
+        //     }
+        //     else {
+        //         console.info(this.name + " misses " + target.name)
+        //     }
+        //     target.isAlive();
+        // },
+        // isAlive() {
+        //     if (this.hitPoints > 0) {
+        //         console.info(this.name + " is alive.")
+        //     }
+        //     else {
+        //         console.info(this.name + " has died!");
+        //     }
+        // },
+        // turn() {
+        //     if (this.hitPoints > 0) {
+        //         if (this.player === false) {
+        //             this.attackTarget(hero)
+        //         }
+        //         else {
+        //             this.attackTarget(enemy)
+        //         }
+        //     }
+        //     else {
+        //         console.info("no turn for dead person")
+        //     }
+        // }
 });
 
 // Syncs with DB
