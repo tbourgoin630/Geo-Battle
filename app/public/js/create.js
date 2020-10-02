@@ -27,12 +27,13 @@ $("#createHero").on("click", function(event) {
       speed: $("#speed").val().trim(),
       player: true
     };
-    console.log(newBattler)
+    //console.log(newBattler)
     console.log(" this is before the post")
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newBattler)
       // On success, run the following code
       .then(function(data) {
+        console.log("start post")
         // Log the data we found
         console.log(data)
         console.log (" this is the inside the post");
