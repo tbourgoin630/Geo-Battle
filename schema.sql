@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `fighters`;
-CREATE DATABASE `fighters`;
+DROP DATABASE IF EXISTS battler_db;
+CREATE DATABASE battler_db;
