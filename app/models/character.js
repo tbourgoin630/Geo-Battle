@@ -19,14 +19,63 @@ var sequelize = require("../configs/connection.js");
 
 // Creates a "Book" model that matches up with DB
 var Battler = sequelize.define("battler_db", {
-            name: Sequelize.STRING,
-            hitPoints: Sequelize.INTEGER,
-            attack: Sequelize.INTEGER,
-            defense: Sequelize.INTEGER,
-            speed: Sequelize.INTEGER,
-            damage: Sequelize.INTEGER,
-            player: Sequelize.BOOLEAN,
-        
+    // name: Sequelize.STRING,
+    name: {
+        type: Sequelize.DataTypes.STRING,
+        get() {
+            const nameString = this.getDataValue(name);
+            return nameString;
+        }
+    },
+    // hitPoints: Sequelize.INTEGER,
+    hitPoints: {
+        type: Sequelize.DataTypes.INTEGER,
+        get() {
+            const hpValue = this.getDataValue(hitPoints);
+            return hpValue;
+        }
+    },
+    // attack: Sequelize.INTEGER,
+    attack: {
+        type: Sequelize.DataTypes.INTEGER,
+        get() {
+            const attackValue = this.getDataValue(attack);
+            return attackValue;
+        }
+    },
+    // defense: Sequelize.INTEGER,
+    defense: {
+        type: Sequelize.DataTypes.INTEGER,
+        get() {
+            const defenseValue = this.getDataValue(defense);
+            return defenseValue;
+        }
+    },
+    // speed: Sequelize.INTEGER,
+    speed: {
+        type: Sequelize.DataTypes.INTEGER,
+        get() {
+            const speedValue = this.getDataValue(speed);
+            return speedValue;
+        }
+    },
+    // damage: Sequelize.INTEGER,
+    damage: {
+        type: Sequelize.DataTypes.INTEGER,
+        get() {
+            const damageValue = this.getDataValue(damagePoints);
+            return damageValue;
+        }
+    },
+    // player: Sequelize.BOOLEAN,
+    player: {
+        type: Sequelize.DataTypes.BOOLEAN,
+        get() {
+            const playerStatus = this.getDataValue(player);
+            return playerStatus;
+        }
+    }
+
 });
 
 // Syncs with DB

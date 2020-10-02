@@ -27,7 +27,7 @@ $("#createHero").on("click", function(event) {
       speed: $("#speed").val().trim(),
       player: true
     };
-  
+    console.log(newBattler)
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newBattler)
       // On success, run the following code
