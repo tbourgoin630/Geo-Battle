@@ -26,23 +26,7 @@ $(document).ready(function () {
     // let damage = $("#damage").val().trim()
     // let speed = $("#speed").val().trim()
     // let player = true
-    // var newBattler = {
-    //   name: $("#warrior").val().trim(),
-    //   hitPoints: 10,
-    //   attack: $("#attack").val().trim(),
-    //   defense: $("#defense").val().trim(),
-    //   damage: $("#damage").val().trim(),
-    //   speed: $("#speed").val().trim(),
-    //   player: true
-    //   // name: name,
-    //   // hitPoints: hitPoints,
-    //   // attack: attack,
-    //   // defense: defense,
-    //   // damage: damage,
-    //   // speed: speed,
-    //   // player: player
-    // };
-    const newBattler = Battler.build({
+    var newBattler = {
       name: $("#warrior").val().trim(),
       hitPoints: 10,
       attack: $("#attack").val().trim(),
@@ -57,7 +41,23 @@ $(document).ready(function () {
       // damage: damage,
       // speed: speed,
       // player: player
-    });
+    };
+    // const newBattler = Battler.build({
+    //   name: $("#warrior").val().trim(),
+    //   hitPoints: 10,
+    //   attack: $("#attack").val().trim(),
+    //   defense: $("#defense").val().trim(),
+    //   damage: $("#damage").val().trim(),
+    //   speed: $("#speed").val().trim(),
+    //   player: true
+    //   // name: name,
+    //   // hitPoints: hitPoints,
+    //   // attack: attack,
+    //   // defense: defense,
+    //   // damage: damage,
+    //   // speed: speed,
+    //   // player: player
+    // });
     console.log(newBattler)
     console.log(" this is before the post")
     // Send an AJAX POST-request with jQuery
