@@ -1,4 +1,4 @@
-function createBattler()
+//function createBattler()
 {
     // let name = document.getElementById("warrior").value;
     // //let hitPoints = document.getElementById("hp").value;
