@@ -28,12 +28,15 @@ $("#createHero").on("click", function(event) {
       player: true
     };
     console.log(newBattler)
+    console.log(" this is before the post")
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newBattler)
       // On success, run the following code
       .then(function(data) {
         // Log the data we found
-        console.log(data);
+        console.log(data)
+        console.log (" this is the inside the post");
+        //console.log(Battler.name)
       });
   
     // Empty each input box by replacing the value with an empty string
