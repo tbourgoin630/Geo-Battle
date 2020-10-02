@@ -1,22 +1,22 @@
 //function createBattler()
-{
-    // let name = document.getElementById("warrior").value;
-    // //let hitPoints = document.getElementById("hp").value;
-    // let attack = document.getElementById("attack").value;
-    // let defense = document.getElementById("defense").value;
-    // let damage = document.getElementById("damage").value;
-    // let speed = document.getElementById("speed").value;
+// {
+//     // let name = document.getElementById("warrior").value;
+//     // //let hitPoints = document.getElementById("hp").value;
+//     // let attack = document.getElementById("attack").value;
+//     // let defense = document.getElementById("defense").value;
+//     // let damage = document.getElementById("damage").value;
+//     // let speed = document.getElementById("speed").value;
 
-    //hero creation
-    // hero = new Character (name, 10, attack, defense, damage, speed, true)
-    // console.log(hero)
-}
-// The code in add.js handles what happens when the user clicks the "Add a book" button.
-
+//     //hero creation
+//     // hero = new Character (name, 10, attack, defense, damage, speed, true)
+//     // console.log(hero)
+// }
+console.log("js loaded.")
+$(document).ready(function() {
 // When user clicks add-btn
 $("#createHero").on("click", function(event) {
     event.preventDefault();
-  
+    console.log("function triggered")
     // Make a newBook object
     var newBattler = {
       name: $("#warrior").val().trim(),
@@ -44,3 +44,4 @@ $("#createHero").on("click", function(event) {
     $("#speed").val("");
   
   });
+});
