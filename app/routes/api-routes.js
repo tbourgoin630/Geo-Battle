@@ -4,52 +4,107 @@
 
 // Dependencies
 // =============================================================
-var Character = require("../models/character.js");
+var Battler = require("../models/character.js");
 
 // Routes
 // =============================================================
-module.exports = function(app) {}
-//   // Search for Specific Character (or all characters) then provides JSON
-//   app.get("/api/:characters?", function(req, res) {
-//     if (req.params.characters) {
-//       // Display the JSON for ONLY that character.
-//       // (Note how we're using the ORM here to run our searches)
-//       Character.findOne({
-//         where: {
-//           routeName: req.params.characters
-//         }
-//       }).then(function(result) {
-//         return res.json(result);
-//       });
-//     } else {
-//       Character.findAll().then(function(result) {
-//         return res.json(result);
-//       });
-//     }
-//   });
+module.exports = function (app) {
+    // Get all books
+    // app.get("/api/all", function(req, res) {
+    //   Book.findAll({}).then(function(results) {
+    //     res.json(results);
+    //   });
+    // });
 
-//   // If a user sends data to add a new character...
-//   app.post("/api/new", function(req, res) {
-//     // Take the request...
-//     var character = req.body;
+    // Get a specific book
+    app.get("/api/:battler", function (req, res) {
+        Battler.findAll({
+            where: {
+                name: req.params.battler
+            }
+        }).then(function (results) {
+            res.json(results);
+        });
+    });
 
-//     // Create a routeName
+    // Get all books of a specific genre
+    // app.get("/api/genre/:genre", function(req, res) {
+    //   Book.findAll({
+    //     where: {
+    //       genre: req.params.genre
+    //     }
+    //   }).then(function(results) {
+    //     res.json(results);
+    //   });
+    // });
 
-//     // Using a RegEx Pattern to remove spaces from character.name
-//     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-//     var routeName = character.name.replace(/\s+/g, "").toLowerCase();
+    // Get all books from a specific author
+    // app.get("/api/author/:author", function(req, res) {
+    //   Book.findAll({
+    //     where: {
+    //       author: req.params.author
+    //     }
+    //   }).then(function(results) {
+    //     res.json(results);
+    //   });
+    // });
 
-//     // Then add the character to the database using sequelize
-//     Character.create({
-//       routeName: routeName,
-//       name: character.name,
-//       hitPoints: character.hitPoints,
-//       attack: character.attack,
-//       defense: character.defense,
-//       speed: character.speed,
-//       damage: character.damage
-//     });
+    // Get all "long" books (books 150 pages or more)
+    // app.get("/api/books/long", function(req, res) {
+    //   Book.findAll({
+    //     where: {
+    //       pages: {
+    //         $gte: 150
+    //       }
+    //     },
+    //     order: [["pages", "DESC"]]
+    //   }).then(function(results) {
+    //     res.json(results);
+    //   });
+    // });
 
-//     res.status(204).end();
-//   });
-// };
+    // Get all "short" books (books 150 pages or less)
+    // app.get("/api/books/short", function(req, res) {
+    //   Book.findAll({
+    //     where: {
+    //       pages: {
+    //         $lte: 150
+    //       }
+    //     },
+    //     order: [["pages", "ASC"]]
+    //   }).then(function(results) {
+    //     res.json(results);
+    //   });
+    // });
+
+    // Add a book
+    app.post("/api/new", function (req, res) {
+        console.log("Battler Data:");
+        console.log(req.body);
+        Battler.create({
+
+            name: req.body.name,
+            hitPoints: req.body.hitPoints,
+            attack: req.body.attack,
+            defense: req.body.defense,
+            speed: req.body.speed,
+            damage: req.body.damage,
+            player: req.body.player
+        }).then(function (results) {
+            res.json(results);
+        });
+    });
+
+    // Delete a book
+    app.delete("/api/battler/:id", function (req, res) {
+        console.log("Battler ID:");
+        console.log(req.params.id);
+        Battler.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function () {
+            res.end();
+        });
+    });
+};

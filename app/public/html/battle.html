@@ -6,13 +6,30 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="local stylesheet" href="./css/battle.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="battlesheet">
+    <script src="jquery-3.5.1.min.js"></script>
+    <!-- <script src="..\js\battle.js"></script>
+    <script src="..\js\create.js"></script>
+    <script src="..\js\combat.js"></script> -->
     <title>Battle scene</title>
 </head>
 
 <body>
     <div class="title">
-        <h1>FIGHT!</h1>
+        <h1>Battle!</h1>
     </div>
-</body>
+    <!--These are the healths bar of the player and the CPU-->
+    <div class="healthplayer">
+        <progress id="healthplayer" value="100" max="100"></progress>
+    </div>
+    <div class="healthcpu">
+        <progress id="healthcpu" value="100" max="100"></progress>
+    </div>
+    <!--This button begins the fight-->
+    <button class="block">FIGHT!</button>
 
+    <div id="fighter">
+        <img src="../assets/fighter.png" style="width:128px;height:128px;">
+    </div>
+
+</body>
 </html>
