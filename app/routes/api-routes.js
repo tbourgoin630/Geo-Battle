@@ -97,7 +97,7 @@ module.exports = function (app) {
 
     // Delete a book
     app.delete("/api/battler/:id", function (req, res) {
-        console.log("Book ID:");
+        console.log("Battler ID:");
         console.log(req.params.id);
         Battler.destroy({
             where: {
