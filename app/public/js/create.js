@@ -41,11 +41,11 @@ $("#createHero").on("click", function(event) {
       });
   
     // Empty each input box by replacing the value with an empty string
-    $("#warrior").val("");
-    $("#attack").val("");
-    $("#defense").val("");
-    $("#damage").val("");
-    $("#speed").val("");
+    $("#warrior").val("0");
+    $("#attack").val("0");
+    $("#defense").val("0");
+    $("#damage").val("0");
+    $("#speed").val("0");
   
   });
 });
