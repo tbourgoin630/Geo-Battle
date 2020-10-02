@@ -20,66 +20,66 @@ var sequelize = require("../configs/connection.js");
 // Creates a "Book" model that matches up with DB
 var Battler = sequelize.define("battler_db", {
     // name: Sequelize.STRING,
+    // hitPoints: Sequelize.INTEGER,
+    // attack: Sequelize.INTEGER,
+    // defense: Sequelize.INTEGER,
+    // damage: Sequelize.INTEGER,
+    // speed: Sequelize.INTEGER,
+    // player: Sequelize.BOOLEAN,
     name: {
         type: Sequelize.DataTypes.STRING,
         get() {
-            // const nameString = this.getDataValue(name);
-            // return nameString;
-            return `${this.name}`;
+            const nameString = this.getDataValue(name);
+            return nameString;
+            // return `${this.name}`;
         }
     },
-    // hitPoints: Sequelize.INTEGER,
     hitPoints: {
         type: Sequelize.DataTypes.INTEGER,
         get() {
-            // const hpValue = this.getDataValue(hitPoints);
-            // return hpValue;
-            return `${this.hitPoints}`;
+            var hpValue = this.getDataValue(hitPoints);
+            return hpValue;
+            // return `${this.hitPoints}`;
         }
     },
-    // attack: Sequelize.INTEGER,
     attack: {
         type: Sequelize.DataTypes.INTEGER,
         get() {
-            // const attackValue = this.getDataValue(attack);
-            // return attackValue;
-            return `${this.attack}`;
+            const attackValue = this.getDataValue(attack);
+            return attackValue;
+            //return `${this.attack}`;
         }
     },
-    // defense: Sequelize.INTEGER,
     defense: {
         type: Sequelize.DataTypes.INTEGER,
         get() {
-            // const defenseValue = this.getDataValue(defense);
-            // return defenseValue;
-            return `${this.defense}`;
+            const defenseValue = this.getDataValue(defense);
+            return defenseValue;
+            //return `${this.defense}`;
         }
     },
-    // speed: Sequelize.INTEGER,
-    speed: {
-        type: Sequelize.DataTypes.INTEGER,
-        get() {
-            // const speedValue = this.getDataValue(speed);
-            // return speedValue;
-            return `${this.speed}`;
-        }
-    },
-    // damage: Sequelize.INTEGER,
     damage: {
         type: Sequelize.DataTypes.INTEGER,
         get() {
-            // const damageValue = this.getDataValue(damagePoints);
-            // return damageValue;
-            return `${this.damage}`;
+            const damageValue = this.getDataValue(damagePoints);
+            return damageValue;
+            //return `${this.damage}`;
         }
     },
-    // player: Sequelize.BOOLEAN,
+    speed: {
+        type: Sequelize.DataTypes.INTEGER,
+        get() {
+            const speedValue = this.getDataValue(speed);
+            return speedValue;
+            //return `${this.speed}`;
+        }
+    },
     player: {
         type: Sequelize.DataTypes.BOOLEAN,
         get() {
-            // const playerStatus = this.getDataValue(player);
-            // return playerStatus;
-            return `${this.player}`;
+            const playerStatus = this.getDataValue(player);
+            return playerStatus;
+            //return `${this.player}`;
         }
     }
 
