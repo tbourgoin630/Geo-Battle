@@ -1,8 +1,10 @@
-
-
 console.log("battle.js triggered")
 
+var myVar;
 
+function myFunction() {
+  myVar = setInterval(turn(char1,char2), 300);
+}
 function checkIfHit(char1, char2) {
     let hitChance = .5 - .1 * (char2.defense);
     console.info(hitChance + " hit chance")
@@ -71,7 +73,9 @@ function combat(char1, char2) {
             //     turn(char1, char2)
             //     turn(char2,char1)
             // }
+            //setInterval(function(){turn(char1, char2)}, 300);
             turn(char1, char2)
+            //setInterval(function(){turn(char2, char1)}, 300);
             turn(char2,char1)
         }
         console.info("Battle over")
@@ -109,9 +113,12 @@ function testFight() {
 // roundTwo()
 // roundThree()
 // Make a get request to our api route that will return every battler
-$.get("/api/all", function(data) {
-    // For each book that our server sends us back
-    for (var i = 0; i < data.length; i++) {
-    }
-    combat(data[0], data[1])
-  });
+
+  function testFight(){
+    $.get("/api/all", function(data) {
+        // For each book that our server sends us back
+        for (var i = 0; i < data.length; i++) {
+        }
+        combat(data[0], data[1])
+      });
+  }
