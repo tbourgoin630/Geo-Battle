@@ -124,3 +124,4 @@ $(document).ready(function () {
     $(location).attr('href', '/view')
   });
 });
+

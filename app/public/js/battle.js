@@ -1,4 +1,7 @@
+
+
 console.log("battle.js triggered")
+
 
 function checkIfHit(char1, char2) {
     let hitChance = .5 - .1 * (char2.defense);
