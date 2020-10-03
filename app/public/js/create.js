@@ -1,3 +1,47 @@
+var floridaMan = {
+  name: "Florida Man",
+  hitPoints: 20,
+  attack: 5,
+  defense: 0,
+  damage: 1,
+  speed: 5,
+  player: false
+  // name: name,
+  // hitPoints: hitPoints,
+  // attack: attack,
+  // defense: defense,
+  // damage: damage,
+  // speed: speed,
+  // player: player
+};
+// const newBattler = Battler.build({
+//   name: $("#warrior").val().trim(),
+//   hitPoints: 10,
+//   attack: $("#attack").val().trim(),
+//   defense: $("#defense").val().trim(),
+//   damage: $("#damage").val().trim(),
+//   speed: $("#speed").val().trim(),
+//   player: true
+//   // name: name,
+//   // hitPoints: hitPoints,
+//   // attack: attack,
+//   // defense: defense,
+//   // damage: damage,
+//   // speed: speed,
+//   // player: player
+// });
+console.log(floridaMan)
+console.log(" this is before the post")
+// Send an AJAX POST-request with jQuery
+$.post("/api/new", floridaMan)
+  // On success, run the following code
+  .then(function (data) {
+    console.log("start post")
+    // Log the data we found
+    console.log(data)
+    console.log(" this is the inside the post");
+    //console.log(Battler.name)
+  });
 //var Battler = require("../models/character.js");
 //function createBattler()
 // {
