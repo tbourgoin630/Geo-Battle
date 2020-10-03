@@ -8,6 +8,6 @@ CREATE TABLE battle
 	NAME VARCHAR(100) DEFAULT '',
     LOCATION VARCHAR(100),
 	characters VARCHAR(100),
-	TOP_SCORE INT,
+	Hit_points INT,
 	DAMAGE INT
     );
