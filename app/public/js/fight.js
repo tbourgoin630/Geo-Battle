@@ -78,3 +78,4 @@ function playFight() {
     $('#fight-sound')[0].load();
     $('#fight-sound')[0].play();
 }
+
