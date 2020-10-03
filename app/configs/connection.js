@@ -9,10 +9,11 @@ var Sequelize = require("sequelize");
 var sequelize = new Sequelize("battler_db", "root", "", {
   host: "localhost",
   port: 3306,
+  user: "root",
   dialect: "mysql",
   database: "geo_battle",
   password: "",
-  password: "Thunder1",
+  password: "Handwall5302",
   database: "battler_db",
   pool: {
     max: 5,

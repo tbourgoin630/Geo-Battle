@@ -2,8 +2,16 @@ console.log("battle.js triggered")
 
 var myVar;
 
+function addText(x) {
+    var h = document.createElement('combattext');
+    var t = document.createTextNode(x);
+    h.appendChild(t);
+    document.body.appendChild(h);
+}
+
+
 function myFunction() {
-  myVar = setInterval(turn(char1,char2), 300);
+    myVar = setInterval(turn(char1, char2), 300);
 }
 function checkIfHit(char1, char2) {
     let hitChance = .5 - .1 * (char2.defense);
@@ -19,7 +27,7 @@ function checkIfHit(char1, char2) {
     }
 }
 function attackTarget(char1, char2) {
-    console.info(char1.name + " attacks " + char2.name)
+    addText(char1.name + " attacks " + char2.name)
     checkIfHit(char1, char2)
     if (hit === true) {
         let dmg = char1.damage
@@ -27,7 +35,7 @@ function attackTarget(char1, char2) {
         char2.hitPoints -= dmg;
     }
     else {
-        console.info(char1.name + " misses " + char2.name)
+        addText(char1.name + " misses " + char2.name)
     }
     isAlive(char2);
 }
@@ -36,7 +44,7 @@ function isAlive(char1) {
         console.info(char1.name + " is alive.")
     }
     else {
-        console.info(char1.name + " has died!");
+        addText(char1.name + " has died!");
     }
 }
 function turn(char1, char2) {
@@ -67,7 +75,7 @@ function combat(char1, char2) {
     else {
         let turnArray = [char1, char2];
         turnArray.sort((a, b) => (a.speed < b.speed) ? 1 : (a.speed === b.speed) ? ((a.name > b.name) ? 1 : -1) : -1)
-        console.info("start combat")
+        addText("start combat")
         while (char1.hitPoints > 0 && char2.hitPoints > 0) {
             // for (i = 0; i < turnArray.length; i++) {
             //     turn(char1, char2)
@@ -76,16 +84,16 @@ function combat(char1, char2) {
             //setInterval(function(){turn(char1, char2)}, 300);
             turn(char1, char2)
             //setInterval(function(){turn(char2, char1)}, 300);
-            turn(char2,char1)
+            turn(char2, char1)
         }
         console.info("Battle over")
         if (char1.hitPoints > 0) {
-            console.info(char1.name + " wins")
+            addText(char1.name + " wins")
         }
         else {
             console.info(char1.name + " loses")
             if (char2.name === "Florida Man") {
-                console.info("No one defeats Florida Man.")
+                addText("No one defeats Florida Man.")
             }
             else { }
         }
@@ -107,18 +115,18 @@ function combat(char1, char2) {
 // }
 function testFight() {
     hero = newBattler;
-    combat(hero,floridaMan)
+    combat(hero, floridaMan)
 }
 // roundOne()
 // roundTwo()
 // roundThree()
 // Make a get request to our api route that will return every battler
 
-  function testFight(){
-    $.get("/api/all", function(data) {
+function testFight() {
+    $.get("/api/all", function (data) {
         // For each book that our server sends us back
         for (var i = 0; i < data.length; i++) {
         }
         combat(data[0], data[1])
-      });
-  }
+    });
+}
