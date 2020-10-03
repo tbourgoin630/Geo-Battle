@@ -61,7 +61,7 @@ body {
 
   .block {
     position: absolute;
-            top: 900px;
+            top: 600px;
             left: 695px;
     display: block;
     width: 15%;
@@ -82,33 +82,54 @@ body {
   .ryu {
     float: left;
 }
+.ryu1 {
+  float: right;
+}
+
 .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .easteregg {
   width: 659px;
   height: 494px;
 }
+
+
+
 .ryu-ready, .ryu-throwing, .ryu-cool, .easteregg {
   display: none;
 }
+
 .ryu-ready {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-ready-position.gif');
 }
+
+
+
 .ryu-still {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-standing-still.png');
 }
+
+
 .ryu-throwing {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-throwing-hadouken.png');
 }
+
+
 .ryu-cool {
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-cool.gif');
 }
+
+
 .easteregg {
     margin-left: 80%;
     margin-top: -78%;
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/easteregg.gif');
 }
+
+
 .hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .easteregg {
   background-repeat: no-repeat;
 }
+
+
 .hadouken {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/hadouken.gif');
   width: 156px;
@@ -119,15 +140,18 @@ body {
   left: -212px;
   float: left;
 }
-.instructions {
-    font-family: 'Ceviche One', cursive;
-    font-size: 45px;
-    color: lightgray;
-    text-align: right;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-bottom: 2%;
+
+.hadouken1 {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/hadouken.gif');
+  width: 156px;
+  height: 90px;
+  display: none;
+  position: relative;
+  top: 167px;
+  left: -212px;
+  float: right;
 }
+
 
 
 

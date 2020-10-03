@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.ryu').mouseenter(function () {
+    $('.block').click(function () {
         $('.ryu-still').hide();
         $('.ryu-ready').show();
     })
