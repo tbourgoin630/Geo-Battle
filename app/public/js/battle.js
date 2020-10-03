@@ -1,3 +1,5 @@
+console.log("battle.js triggered")
+
 function checkIfHit(char1, char2) {
     let hitChance = .5 - .1 * (char2.defense);
     console.info(hitChance + " hit chance")
@@ -22,7 +24,7 @@ function attackTarget(char1, char2) {
     else {
         console.info(char1.name + " misses " + char2.name)
     }
-    target.isAlive();
+    isAlive(char2);
 }
 function isAlive(char1) {
     if (char1.hitPoints > 0) {
@@ -33,13 +35,14 @@ function isAlive(char1) {
     }
 }
 function turn(char1, char2) {
-    if (this.hitPoints > 0) {
-        if (this.player === false) {
-            this.attackTarget(char1, char2)
-        }
-        else {
-            this.attackTarget(char2, char1)
-        }
+    if (char1.hitPoints > 0) {
+        attackTarget(char1, char2)
+        // if (char1.player === false) {
+        //     attackTarget(char1, char2)
+        // }
+        // else {
+        //     attackTarget(char2, char1)
+        // }
     }
     else {
         console.info("no turn for dead person")
@@ -53,7 +56,7 @@ function turn(char1, char2) {
 //boston teapartier
 let hit = false;
 function combat(char1, char2) {
-    if (hero.hitPoints <= 0) {
+    if (char1.hitPoints <= 0) {
         console.log("No condition to fight.")
     }
     else {
@@ -61,9 +64,12 @@ function combat(char1, char2) {
         turnArray.sort((a, b) => (a.speed < b.speed) ? 1 : (a.speed === b.speed) ? ((a.name > b.name) ? 1 : -1) : -1)
         console.info("start combat")
         while (char1.hitPoints > 0 && char2.hitPoints > 0) {
-            for (i = 0; i < turnArray.length; i++) {
-                turnArray[i].turn()
-            }
+            // for (i = 0; i < turnArray.length; i++) {
+            //     turn(char1, char2)
+            //     turn(char2,char1)
+            // }
+            turn(char1, char2)
+            turn(char2,char1)
         }
         console.info("Battle over")
         if (char1.hitPoints > 0) {
@@ -99,3 +105,10 @@ function testFight() {
 // roundOne()
 // roundTwo()
 // roundThree()
+// Make a get request to our api route that will return every battler
+$.get("/api/all", function(data) {
+    // For each book that our server sends us back
+    for (var i = 0; i < data.length; i++) {
+    }
+    combat(data[0], data[1])
+  });
