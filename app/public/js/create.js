@@ -77,7 +77,6 @@ $(document).ready(function () {
     $("#defense").val("0");
     $("#damage").val("0");
     $("#speed").val("0");
-    //window.location.href = "localhost:8080/view";
     $(location).attr('href', '/view')
   });
 });
