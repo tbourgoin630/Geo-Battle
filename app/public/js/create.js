@@ -77,6 +77,6 @@ $(document).ready(function () {
     $("#defense").val("0");
     $("#damage").val("0");
     $("#speed").val("0");
-
+    $(location).attr('href', '/view')
   });
 });
