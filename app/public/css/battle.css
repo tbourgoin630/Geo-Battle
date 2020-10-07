@@ -154,10 +154,8 @@ border-top: 100px;
 }
 
 
-.combattext {
-  /*position: absolute;
-            top: 400px;
-            left: 950px;*/
+#combattext {
+  
   text-align: center;
             font-size: x-large;
              font-family: 'Russo One', sans-serif;
