@@ -154,12 +154,11 @@ border-top: 100px;
 }
 
 
-#combattext {
+.combattext {
   
-  text-align: center;
-            font-size: x-large;
-             font-family: 'Russo One', sans-serif;
-             color: #ddd;
+ font-weight: bolder;
+ font-family: 'Times New Roman', Times, serif;
+ color: white;
 }
 
 
