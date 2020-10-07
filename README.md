@@ -46,7 +46,7 @@ As a gamer i want the ability to create a custom player and battle multiple cpu'
 
   ---
   
-  ## License
+## License
   
   
   ---
