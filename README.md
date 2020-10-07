@@ -47,8 +47,7 @@ As a gamer i want the ability to create a custom player and battle multiple cpu'
   ---
   
 ## License
-  
-  
+- This project is licensed under the terms of the MIT license.
   ---
   
 [Back To The Top](#)
