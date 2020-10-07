@@ -4,17 +4,18 @@ var myVar;
 
 function addText(x) {
     console.log("added text")
-    var tag = document.createElement('p');
+    var tag = document.createElement("p");
     var text = document.createTextNode(x);
     tag.appendChild(text);
     var element = document.getElementById("combatText");
     element.appendChild(tag);
+    console.log(x)
 }
 
 
-function myFunction() {
-    myVar = setInterval(turn(char1, char2), 300);
-}
+// function myFunction() {
+//     myVar = setInterval(turn(char1, char2), 300);
+// }
 function checkIfHit(char1, char2) {
     let hitChance = .5 - .1 * (char2.defense);
     console.info(hitChance + " hit chance")
@@ -32,6 +33,7 @@ function attackTarget(char1, char2) {
     addText(char1.name + " attacks " + char2.name)
     checkIfHit(char1, char2)
     if (hit === true) {
+        addText(char1.name + " hits " + char2.name)
         let dmg = char1.damage
         console.info(dmg)
         char2.hitPoints -= dmg;
@@ -77,21 +79,35 @@ function combat(char1, char2) {
     else {
         let turnArray = [char1, char2];
         turnArray.sort((a, b) => (a.speed < b.speed) ? 1 : (a.speed === b.speed) ? ((a.name > b.name) ? 1 : -1) : -1)
-        addText("start combat")
+        addText("Ready? Set! Fight!")
+        var round = 0;
+        console.log("before while")
         while (char1.hitPoints > 0 && char2.hitPoints > 0) {
+            console.log("in while")
             // for (i = 0; i < turnArray.length; i++) {
             //     turn(char1, char2)
             //     turn(char2,char1)
             // }
             //setInterval(function(){turn(char1, char2)}, 300);
+            //setTimeout(turn(char1, char2), 5000);
+            round++
+            //setTimeout(() => round++, 1000);
+            addText("Round: " + round);
+            //setTimeout(() => turn(char1, char2), 1000);
             turn(char1, char2)
             //setInterval(function(){turn(char2, char1)}, 300);
             turn(char2, char1)
+            //setTimeout(turn(char2, char2), 5000);
+            //setTimeout(() => turn(char2, char1), 1000);
         }
         console.info("Battle over")
-        if (char1.hitPoints > 0) {
+        if (char1.hitPoints > 0 && char2.hitPoints <= 0) {
             addText(char1.name + " wins")
         }
+        // else if (char1.hitPoints > 0 && char2.hitPoints > 0)
+        // {
+        //     addText("It was a tie.")
+        // }
         else {
             console.info(char1.name + " loses")
             if (char2.name === "Florida Man") {
