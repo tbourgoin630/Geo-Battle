@@ -3,10 +3,12 @@ console.log("battle.js triggered")
 var myVar;
 
 function addText(x) {
-    var h = document.createElement('combattext');
-    var t = document.createTextNode(x);
-    h.appendChild(t);
-    document.body.appendChild(h);
+    console.log("added text")
+    var tag = document.createElement('p');
+    var text = document.createTextNode(x);
+    tag.appendChild(text);
+    var element = document.getElementById("combatText");
+    element.appendChild(tag);
 }
 
 
