@@ -2,6 +2,7 @@ $(document).ready(function () {
     $('.block').click(function () {
         $('.ryu-still').hide();
         $('.ryu-ready').show();
+        $('.combattext').fade();
     })
         .mouseleave(function () {
             $('.ryu-ready').hide();
