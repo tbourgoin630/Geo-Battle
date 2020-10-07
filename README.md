@@ -11,10 +11,10 @@ GEO-BATTLE Read me
 ## Contributors
 This was a joint project between the following developers with links to each of their respective Github accounts.
 
-[https://github.com/Bremah-mvp](https://github.com/Bremah-mvp) -Bremah Lwanga
-[https://github.com/wmhunt1](https://github.com/wmhunt1) -Warren Hunt
-[https://github.com/tbourgoin630](https://github.com/tbourgoin630) -Tim Bourgoin
-[https://github.com/farmerj95](https://github.com/farmerj95) -Jesse Farmer
+- [https://github.com/Bremah-mvp](https://github.com/Bremah-mvp) -Bremah Lwanga
+- [https://github.com/wmhunt1](https://github.com/wmhunt1) -Warren Hunt
+- [https://github.com/tbourgoin630](https://github.com/tbourgoin630) -Tim Bourgoin
+- [https://github.com/farmerj95](https://github.com/farmerj95) -Jesse Farmer
 
 ---
 ## Description
