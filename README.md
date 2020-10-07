@@ -44,4 +44,9 @@ As a gamer i want the ability to create a custom player and battle multiple cpu'
 - [w3schools.com](https://www.w3schools.com/js/js_ajax_intro.asp)
 
   ---
+  
+  ## License
+  
+  -[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/DAVFoundation/captain-n3m0/blob/master/LICENSE)
+  
 [Back To The Top](#)
