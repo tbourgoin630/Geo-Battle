@@ -22,7 +22,7 @@ This was a joint project between the following developers with links to each of 
 ---
 ## Description
 
-Geo-battle is an awesome and interesting  node application that lets gamers or users to create favourite fighters for combat again multiple villans
+Geo-battle is an application where users can create their own customized player who can then battle different villains from across the nation. The user will see how many different viallains they can face and attempt to score the most points and compare their score to their friends to see who is the best Geo-battler! In the app, users will be given a set amount of point and must choose wisely how to creat their player. Then by pulling different locations from the user they may face different villians from different parts of the US. 
 
 ---
 
