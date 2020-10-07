@@ -93,12 +93,14 @@ function combat(char1, char2) {
             round++
             //setTimeout(() => round++, 1000);
             addText("Round: " + round);
-            //setTimeout(() => turn(char1, char2), 1000);
+            //setTimeout(() => turn(char1,char2), 1000);
+            //setTimeout(() => turn, 1000, char1, char2);
             turn(char1, char2)
             //setInterval(function(){turn(char2, char1)}, 300);
             turn(char2, char1)
             //setTimeout(turn(char2, char2), 5000);
-            //setTimeout(() => turn(char2, char1), 1000);
+            //setTimeout(() => turn, 1000, char2, char1);
+            //setTimeout(() => turn (char2, char1), 1000);
         }
         console.info("Battle over")
         if (char1.hitPoints > 0 && char2.hitPoints <= 0) {
