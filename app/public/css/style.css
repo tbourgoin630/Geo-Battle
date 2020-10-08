@@ -3,7 +3,10 @@
 html, body {
   height: 100%;
 }
-
+.title
+{
+  text-align: center;
+}
 /*body {
   display: flex;
   flex-direction: column;

@@ -158,11 +158,16 @@ border-top: 100px;
 }
 
 
-.combattext {
+.combat {
   
- font-weight: bolder;
- font-family: 'Times New Roman', Times, serif;
- color: white;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Russo One', sans-serif;
+  color: #ddd;
+  /* word-wrap: break-word; */
+  overflow: auto;
+  height: 200px;
+  width: fit-content
 }
 
 
