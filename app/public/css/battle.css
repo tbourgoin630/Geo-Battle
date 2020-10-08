@@ -6,6 +6,10 @@ html, body {
 body {
     background-image: url(https://i.pinimg.com/originals/f2/19/75/f219759f63ad18c7f581ebd4880a2f0a.jpg);
     background-size: 1660px;
+    color: red;
+    font-weight: bolder;
+    font-size: x-large;
+    
 }
 
 /*.title {
