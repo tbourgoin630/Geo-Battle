@@ -2,6 +2,9 @@ $(document).ready(function () {
     $('.block').click(function () {
         $('.ryu-still').hide();
         $('.ryu-ready').show();
+        $( '.ryu-ready' ).slideUp( 3000 ).delay( 8000 ).fadeIn( 4000 );
+        $( '.ryu-ready' ).slideUp( 3000 ).fadeIn( 4000 );
+
        
     })
         .mouseleave(function () {
