@@ -2,8 +2,8 @@ $(document).ready(function () {
     $('.block').click(function () {
         $('.ryu-still').hide();
         $('.ryu-ready').show();
-        $( "div.first" ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
-        $( "div.second" ).slideUp( 300 ).fadeIn( 400 );
+        $( '.ryu-ready' ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+        $( '.ryu-ready' ).slideUp( 300 ).fadeIn( 400 );
 
        
     })
