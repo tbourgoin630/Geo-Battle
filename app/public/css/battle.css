@@ -161,6 +161,9 @@ border-top: 100px;
   font-family: 'Russo One', sans-serif;
   color: #ddd;
   /* word-wrap: break-word; */
+  overflow: auto;
+  height: 200px;
+  width: fit-content
 }
 
 
