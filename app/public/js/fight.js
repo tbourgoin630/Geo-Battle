@@ -4,7 +4,7 @@ $(document).ready(function () {
         $('.ryu-ready').show();
         $( '.ryu-ready' ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
         $( '.ryu-ready' ).slideUp( 300 ).fadeIn( 400 );
-        $('.combat').delay(2000);
+        $('.combat').slideUp(500);
        
     })
         .mouseleave(function () {
