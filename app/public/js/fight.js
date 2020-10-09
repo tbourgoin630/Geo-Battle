@@ -2,12 +2,17 @@ $(document).ready(function () {
     $('.block').click(function () {
         $('.ryu-still').hide();
         $('.ryu-ready').show();
-        $('.combattext').fade();
+        $( '.ryu-ready' ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+        $( '.ryu-ready' ).slideUp( 300 ).fadeIn( 400 );
+        
+     
     })
-        .mouseleave(function () {
-            $('.ryu-ready').hide();
-            $('.ryu-still').show();
-        })
+       //.mouseleave(function () {
+          // $('.ryu-ready').hide();
+        //   $('.ryu-still').show();
+      //  })
+    
+     //})
         .mousedown(function () {
             playHadouken();
             $('.ryu-ready').hide();

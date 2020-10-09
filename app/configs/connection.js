@@ -12,7 +12,7 @@ var sequelize = new Sequelize("battler_db", "root", "", {
   user: "root",
   dialect: "mysql",
   database: "geo_battle",
-  password: "Thunder1",
+  password: "Bremen12345$",
   database: "battler_db",
   pool: {
     max: 5,
