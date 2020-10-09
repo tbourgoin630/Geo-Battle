@@ -4,13 +4,15 @@ $(document).ready(function () {
         $('.ryu-ready').show();
         $( '.ryu-ready' ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
         $( '.ryu-ready' ).slideUp( 300 ).fadeIn( 400 );
-        $('.combat').slideUp(500);
-       
+        
+     
     })
-        .mouseleave(function () {
-            $('.ryu-ready').hide();
-            $('.ryu-still').show();
-        })
+       //.mouseleave(function () {
+          // $('.ryu-ready').hide();
+        //   $('.ryu-still').show();
+      //  })
+    
+     //})
         .mousedown(function () {
             playHadouken();
             $('.ryu-ready').hide();
