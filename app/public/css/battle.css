@@ -65,7 +65,7 @@ body {
 
   .block {
     position: absolute;
-            top: 600px;
+            top: 450px;
             left: 695px;
     display: block;
     width: 15%;
@@ -159,7 +159,10 @@ border-top: 100px;
 
 
 .combat {
-  
+
+  position: absolute;
+            top: 530px;
+            left: 660px;
   text-align: center;
   font-size: x-large;
   font-family: 'Russo One', sans-serif;
