@@ -5,6 +5,7 @@
 
 GEO-BATTLE Read me
 
+Deployed Link: https://lit-beyond-05882.herokuapp.com/
 > Here is an image of the main page of the application.
 ---
 ### Table of Contents
